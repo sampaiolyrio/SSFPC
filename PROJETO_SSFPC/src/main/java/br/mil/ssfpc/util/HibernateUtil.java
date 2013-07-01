@@ -21,7 +21,7 @@ public class HibernateUtil {
         
         try {
             
-            System.out.println("Tentando configurar a SF");
+            System.out.println("Tentando configurar a SessionFactory.");
             
             
             Configuration configuration = new Configuration().configure();
@@ -33,7 +33,7 @@ public class HibernateUtil {
             
             System.out.println("Session factory criada corretamente");
         } catch (Exception ex) {
-            System.out.println("Ocorreu um  erro ao iniciar a SF. " + ex);
+            System.out.println("Ocorreu um  erro ao iniciar a SessionFactory. " + ex);
             throw new ExceptionInInitializerError(ex);
         }
         
