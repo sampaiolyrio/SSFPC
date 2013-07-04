@@ -2,29 +2,60 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui"
+      ><!-- xmlns:sec="http://www.springframework.org/security/facelets/tags" -->
 
     <h:head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link href="./css/default.css" rel="stylesheet" type="text/css" />
-        <link href="./css/cssLayout.css" rel="stylesheet" type="text/css" />
-        <title>Facelets Template</title>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+       <link href="#{facesContext.externalContext.requestContextPath}/resources/restrict/css/ssfpc.css" rel="stylesheet" type="text/css" />
+       <link href="#{facesContext.externalContext.requestContextPath}/resources/restrict/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+       <title>Sistema SFPC</title>
     </h:head>
 
     <h:body>
 
-        <div id="top">
-            <ui:insert name="top">Top</ui:insert>
+        <div id="topo">
+            <div id="logotipo"></div>            
+        </div>  
+        <div id="logoff">
+            <div id="user">
+                <h:form>
+                    <h5><h:outputText value="SEJA BEM-VINDO(A) #{bbUsuarioLogado.procuraPessoa().getNome()}!"/></h5>
+                </h:form>
+            </div>
+            <div id="sair">  <a href="#{facesContext.externalContext.requestContextPath}/j_spring_security_logout"><h5>SAIR</h5>
+                </a>             
+            </div>         
+
+        </div>
+        <div id="menu"><!-- Menu ########################################## Menu-->
+            <h:form>    
+                <p:menubar styleClass="labelmenu">
+
+                    <p:submenu label="Cadastros">  
+                        <p:menuitem value="Cidades" url="/restrict/cadastrarcidade.faces"/>                        
+                        <p:menuitem value="Pessoas" action="#{mbPessoa.limpPessoa}" ajax="false"/>                        
+                    </p:submenu> 
+                    <p:submenu label="Consultas">  
+                        <p:menuitem value="Pessoas" url="/restrict/consultarpessoas.faces"/>  
+                    </p:submenu>                                      
+                </p:menubar> 
+            </h:form>           
         </div>
 
-        <div id="content" class="center_content">
-            <ui:insert name="content">Content</ui:insert>
-        </div>
+        <!-- Menu ########################################## Menu -->
 
-        <div id="bottom">
-            <ui:insert name="bottom">Bottom</ui:insert>
+        <div id="tarefas">
+            <ui:insert name="tarefas"></ui:insert>
         </div>
+        
+        <div id="rodape">Desenvolvido pela Se&ccedil;&atilde;o de Sistemas do Comando da 1&ordf; Região Militar - Ex&eacute;rcito Brasileiro</div>
+        <!--Fim da div rodape -->
 
+     
     </h:body>
 
 </html>
