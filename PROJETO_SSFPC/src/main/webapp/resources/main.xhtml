@@ -16,21 +16,21 @@
     </h:head>
 
     <h:body>
-
+        
         <div id="topo">
             <div id="logotipo"></div>            
         </div>  
-        <div id="logoff">
+        
             <div id="user">
                 <h:form>
-                    <h5><h:outputText value="SEJA BEM-VINDO(A) #{bbUsuarioLogado.procuraPessoa().getNome()}!"/></h5>
+                    <h5><h:outputText value="Seja bem-vindo(a) #{bbUsuarioLogado.procuraPessoa().getNome()}!"/></h5>
                 </h:form>
             </div>
-            <div id="sair">  <a href="#{facesContext.externalContext.requestContextPath}/j_spring_security_logout"><h5>SAIR</h5>
-                </a>             
+            <div id="sair">  <h5><a href="#{facesContext.externalContext.requestContextPath}/j_spring_security_logout">Logoff</a></h5>
+                             
             </div>         
 
-        </div>
+        
         <div id="menu"><!-- Menu ########################################## Menu-->
             <h:form>    
                 <p:menubar styleClass="labelmenu">
@@ -48,11 +48,12 @@
 
         <!-- Menu ########################################## Menu -->
 
-        <div id="tarefas">
+         <div id="tarefas">
             <ui:insert name="tarefas"></ui:insert>
         </div>
         
-        <div id="rodape">Desenvolvido pela Se&ccedil;&atilde;o de Sistemas do Comando da 1&ordf; Região Militar - Ex&eacute;rcito Brasileiro</div>
+        <div id="rodape">Divisão de Tecnologia da Informação - 2013
+        </div>
         <!--Fim da div rodape -->
 
      
