@@ -76,7 +76,7 @@
     
     
     <!-- Filtros do Spring  -->
-<!--    <listener>
+    <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
     <filter>
@@ -90,8 +90,6 @@
         <dispatcher>REQUEST</dispatcher>
     </filter-mapping>
     
-     Endereço dos arquivos de configuração do Spring 
-    
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
@@ -99,10 +97,6 @@
         </param-value>
     </context-param>
  
- -->
-    
-   
-    
     <!-- Filtros de Upload -->
     
     <!--    <filter>  

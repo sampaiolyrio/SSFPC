@@ -1,6 +1,6 @@
 package controller;
 
-//import br.mil.ssfpc.conversores.ConverterSHA1;
+import br.mil.ssfpc.conversores.ConverterSHA1;
 import br.mil.ssfpc.model.dao.HibernateDAO;
 import br.mil.ssfpc.model.dao.InterfaceDAO;
 import br.mil.ssfpc.model.entities.Endereco;
@@ -61,18 +61,18 @@ public class MbPessoa implements Serializable {
     }
 
     private void insertPessoa() {
-//        pessoa.setSenha(ConverterSHA1.cipher(pessoa.getSenha()));
-//        if (pessoa.getSenha() == null ? confereSenha == null : pessoa.getSenha().equals(ConverterSHA1.cipher(confereSenha))) {
-//            pessoa.setPermissao("ROLE_ADMIN");
+           pessoa.setSenha(ConverterSHA1.cipher(pessoa.getSenha()));
+        if (pessoa.getSenha() == null ? confereSenha == null : pessoa.getSenha().equals(ConverterSHA1.cipher(confereSenha))) {
+            pessoa.setPermissao("ROLE_ADMIN");
             pessoaDAO().save(pessoa);
             endereco.setPessoa(pessoa);
             enderecoDAO().save(endereco);
             FacesContext.getCurrentInstance().addMessage(null,
                  new FacesMessage(FacesMessage.SEVERITY_INFO, "Gravação efetuada com sucesso", ""));
-//        } else {
-//            FacesContext.getCurrentInstance().addMessage(null,
-//                    new FacesMessage(FacesMessage.SEVERITY_INFO, "As senhas não conferem.", ""));
-//        }
+        } else {
+            FacesContext.getCurrentInstance().addMessage(null,
+                    new FacesMessage(FacesMessage.SEVERITY_INFO, "As senhas não conferem.", ""));
+        }
     }
 
     private void updatePessoa() {

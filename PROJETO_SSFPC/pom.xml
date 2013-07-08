@@ -376,10 +376,10 @@
         
         <!-- |||| DEPENDÊNCIAS DO SPRING-SECURITY || -->  
                                                  
-        <!-- ### FACELETS-TAGLIB-JSF2.0-SPRING-3 ### -->
+        <!-- ### FACELETS-TAGLIB-JSF2.0-SPRING-3 ### utlizado para que se integre o facelets e o jsf com o spring security-->
         <dependency>
             <groupId>org.springframework.security</groupId>
-            <artifactId>facelets-taglib-jsf20-spring-3</artifactId>
+            <artifactId>facelets-taglib-jsf20-spring-3</artifactId> 
             <version>0.5</version>
         </dependency>
                                
