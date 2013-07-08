@@ -65,8 +65,8 @@ public class MbPessoa implements Serializable {
 //        if (pessoa.getSenha() == null ? confereSenha == null : pessoa.getSenha().equals(ConverterSHA1.cipher(confereSenha))) {
 //            pessoa.setPermissao("ROLE_ADMIN");
             pessoaDAO().save(pessoa);
-//            endereco.setPessoa(pessoa);
-//            enderecoDAO().save(endereco);
+            endereco.setPessoa(pessoa);
+            enderecoDAO().save(endereco);
             FacesContext.getCurrentInstance().addMessage(null,
                  new FacesMessage(FacesMessage.SEVERITY_INFO, "Gravação efetuada com sucesso", ""));
 //        } else {

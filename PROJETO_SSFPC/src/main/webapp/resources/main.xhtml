@@ -26,7 +26,7 @@
                     <h5><h:outputText value="Seja bem-vindo(a) #{bbUsuarioLogado.procuraPessoa().getNome()}!"/></h5>
                 </h:form>
             </div>
-            <div id="sair">  <h5><a href="#{facesContext.externalContext.requestContextPath}/j_spring_security_logout">Logoff</a></h5>
+        <div id="sair">  <h5><a href="#{facesContext.externalContext.requestContextPath}/j_spring_security_logout">Logoff</a></h5>
                              
             </div>         
 
@@ -49,8 +49,9 @@
         <!-- Menu ########################################## Menu -->
 
          <div id="tarefas">
-            <ui:insert name="tarefas"></ui:insert>
-        </div>
+             
+                     <ui:insert name="tarefas"></ui:insert>
+         </div>
         
         <div id="rodape">Divisão de Tecnologia da Informação - 2013
         </div>
