@@ -50,6 +50,7 @@
                     <f:facet name="header">
                         <h:outputText value="Ações"/>
                     </f:facet>
+                    
                     <p:commandButton action="#{mbPessoa.editPessoa}"
                         value="Editar" image="ui-icon ui-icon-pencil"
                         update="@form" ajax="false">
@@ -62,8 +63,7 @@
                         <f:setPropertyActionListener value="#{pessoa.endereco.tipologradouro.idTipoLogradouro}" target="#{mbPessoa.endereco.tipologradouro.idTipoLogradouro}"/>
                     </p:commandButton>
                     
-                    <p:commandButton value="Cancelar" action="#{mbPessoa.limpPessoa}"
-                                     image="ui-icon ui-icon-close" update="@form"/>
+                                        
 
                 </p:column>
 
