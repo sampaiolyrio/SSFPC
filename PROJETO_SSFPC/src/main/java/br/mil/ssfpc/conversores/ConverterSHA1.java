@@ -23,6 +23,10 @@ public class ConverterSHA1 implements Converter{
     }
 
     public static String cipher(String value) {
+        //não se descriptografa-se a senha, caso o usuário esqueça,
+        //deve-se fazer perguntas para confirmar sua autenticidade. 
+        // Se tudo certo, altera-se a senha e encaminha a nova via e-mail, 
+        // mas já armazenando-a criptografada no banco. 
         String algorithm = "SHA1";
         byte[] buffer = value.getBytes();
         MessageDigest md;

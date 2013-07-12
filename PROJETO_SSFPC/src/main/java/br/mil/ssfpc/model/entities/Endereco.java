@@ -31,7 +31,9 @@ public class Endereco implements Serializable {
     @Column (name="Numero")
     private Integer numero;
     @Column (name="Complemento")
-    private Integer complemento;
+    private String complemento;
+
+   
     
     @OneToOne(optional=true, fetch= FetchType.LAZY)
     // Pode cadastrar pessoa sem cadastrar endereço.
@@ -110,11 +112,11 @@ public class Endereco implements Serializable {
         this.numero = numero;
     }
 
-    public Integer getComplemento() {
+     public String getComplemento() {
         return complemento;
     }
 
-    public void setComplemento(Integer complemento) {
+    public void setComplemento(String complemento) {
         this.complemento = complemento;
     }
 

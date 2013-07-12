@@ -8,13 +8,13 @@
                 xmlns:p="http://primefaces.org/ui"
                 template="./../resources/main.xhtml">
   
-     <ui:define name="tarefas">
+     <ui:define name="tarefas"> 
          
-       
+       <h:form>
         <p:fieldset legend="Cadastrar Pessoas">
             <br/>
             
-            <h:form>
+            
                 <p:wizard nextLabel="Próxima Aba" backLabel="Aba Anterior">
                     <p:tab title="Informações Básicas" id="infoPessoal">
                         <p:panel header="Informações Básicas da Pessoa">
@@ -129,9 +129,12 @@
                                 
                                 <p:panelGrid columns="2" styleClass="panelGrid">
                                   
-                                    
+                                   
                                     <p:commandButton value="Salvar" action="#{mbPessoa.addPessoa}"
                                                      image="ui-icon ui-icon-disk" update="@form" />
+                                    
+                                    
+                                    
                                     <p:commandButton value="Cancelar" actionListener="#{mbPessoa.limpPessoa}" 
                                                      image="ui-icon ui-icon-close" update="@form"/>
                                     
@@ -142,9 +145,11 @@
                         </p:panel>
                     </p:tab>
                 </p:wizard>
-            </h:form>
+            
            
         </p:fieldset>
+       </h:form>    
       </ui:define>
+       
   </ui:composition>
 
