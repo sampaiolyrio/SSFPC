@@ -14,12 +14,12 @@
     
 
     
-    <!--    
+      
     <factory>
         <exception-handler-factory>
-            br.com.semeru.exceptions.CustomExceptionHandlerFactory
+            br.mil.ssfpc.exceptions.CustomExceptionHandlerFactory
         </exception-handler-factory>
     </factory>
-    -->
+   
 
 </faces-config>

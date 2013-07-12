@@ -1,4 +1,4 @@
-package controller;
+package br.mil.ssfpc.controller;
 
 import br.mil.ssfpc.conversores.ConverterSHA1;
 import br.mil.ssfpc.model.dao.HibernateDAO;
