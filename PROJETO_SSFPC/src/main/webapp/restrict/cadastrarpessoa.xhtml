@@ -9,11 +9,10 @@
                 template="./../resources/main.xhtml">
   
      <ui:define name="tarefas"> 
-         
-       <h:form>
-        <p:fieldset legend="Cadastrar Pessoas">
+      <h:form id="formCadPessoa">
+       <p:fieldset legend="Cadastrar Pessoas">
+
             <br/>
-            
             
                 <p:wizard nextLabel="Próxima Aba" backLabel="Aba Anterior">
                     <p:tab title="Informações Básicas" id="infoPessoal">
@@ -127,18 +126,18 @@
                                 <p:inputText id="complemento" size="20" value="#{mbPessoa.endereco.complemento}" onkeyup="this.value = this.value.toUpperCase();"/>
 
                                 
-                                <p:panelGrid columns="2" styleClass="panelGrid">
-                                  
+                                       
                                    
                                     <p:commandButton value="Salvar" action="#{mbPessoa.addPessoa}"
                                                      image="ui-icon ui-icon-disk" update="@form" />
                                     
                                     
                                     
+                                    
                                     <p:commandButton value="Cancelar" actionListener="#{mbPessoa.limpPessoa}" 
                                                      image="ui-icon ui-icon-close" update="@form"/>
                                     
-                                </p:panelGrid>
+                            
                             
                             
                             </h:panelGrid>
@@ -147,9 +146,10 @@
                 </p:wizard>
             
            
-        </p:fieldset>
-       </h:form>    
-      </ui:define>
+        
+     </p:fieldset>
+   </h:form>    
+ </ui:define>
        
   </ui:composition>
 
